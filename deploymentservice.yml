@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: thetips4you/nodeapp:latest
+        image: docker.io/rvteja358/node_jenkinsapp_kubernetes:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 4000
         
         
 ---
@@ -33,6 +33,6 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 3000
-    nodePort: 31110
+    port: 6000
+    targetPort: 4000
+    nodePort: 31111
